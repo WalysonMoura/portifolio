@@ -34,53 +34,52 @@ export const Principal = styled.section`
     }
 
     @keyframes float {
-        0% {
-          transform: translatey(0px);
-        }
-        50% {
-          transform: translatey(-30px);
-        }
-        100% {
-          transform: translatey(0px);
-        }
+      0% {
+        transform: translatey(0px);
       }
+      50% {
+        transform: translatey(-30px);
+      }
+      100% {
+        transform: translatey(0px);
+      }
+    }
 
-      @keyframes float2 {
-        0% {
-          transform: translatey(0px);
-        }
-        50% {
-          transform: translatey(-20px);
-        }
-        100% {
-          transform: translatey(0px);
-        }
+    @keyframes float2 {
+      0% {
+        transform: translatey(0px);
       }
+      50% {
+        transform: translatey(15px);
+      }
+      100% {
+        transform: translatey(0px);
+      }
+    }
 
-      
-      @keyframes float3 {
-        0% {
-          transform: translatey(0px);
-        }
-        50% {
-          transform: translatey(-50px);
-        }
-        100% {
-          transform: translatey(0px);
-        }
+    @keyframes float3 {
+      0% {
+        transform: translatey(0px);
       }
+      50% {
+        transform: translatey(-50px);
+      }
+      100% {
+        transform: translatey(0px);
+      }
+    }
 
-      @keyframes float4 {
-        0% {
-          transform: translatey(0px);
-        }
-        50% {
-          transform: translatey(-10px);
-        }
-        100% {
-          transform: translatey(0px);
-        }
+    @keyframes float4 {
+      0% {
+        transform: translatey(0px);
       }
+      50% {
+        transform: translatey(10px);
+      }
+      100% {
+        transform: translatey(0px);
+      }
+    }
 
     .f1 {
       animation: float2 3.5s ease-in-out infinite;
@@ -93,7 +92,7 @@ export const Principal = styled.section`
       left: 0;
     }
     .f3 {
-      animation: float4 3.5s ease-in-out infinite;
+      animation: float 3.5s ease-in-out infinite;
       top: 70%;
       left: 0;
     }
@@ -124,16 +123,43 @@ export const Principal = styled.section`
     row-gap: 5rem;
   }
 `;
-export const Tecnologias = styled.section`
-  padding: 0 1rem;
-  width: 100%;
-  display: grid;
-  grid-gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  justify-content: center;
-  justify-items: center;
+export const Sobre = styled.section``;
 
-  @media (max-width: 768px) {
+export const Conhecimentos = styled.section`
+  width: 100%;
+
+  .tecnologias {
+    padding: 0 1rem;
+    width: 100%;
+    display: grid;
+    grid-gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    justify-content: center;
+    justify-items: center;
+
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
   }
 `;
+export const Projetos = styled.section`
+  width: 100%;
+  
+  .cards {
+   
+    padding: 0 1rem;
+    width: 100%;
+    display: grid;
+    grid-gap: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    justify-content: center;
+    justify-items: center;
+
+    @media (max-width: 768px) {
+      padding: 0 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+  }
+`;
+
+export const Contact = styled.section``;
