@@ -20,6 +20,7 @@
     "react-dom": "18.2.0",
     "react-icons": "^4.4.0",
     "react-parallax-tilt": "^1.7.67",
+    "react-tilt": "^0.1.4",
     "styled-components": "^5.3.5"
   },
   "devDependencies": {
