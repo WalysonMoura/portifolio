@@ -78,6 +78,7 @@ body {
 	background-color: ${Colors.bodyColor};
 
 	position: relative;
+	
 }
 
 @media screen and (min-width: 968px) {
