@@ -1,5 +1,9 @@
+import { useEffect } from "react";
+
 import Head from "next/head";
 import Image from "next/image";
+
+import formSubmit from "../services/formSubmit";
 
 // React Icons
 
@@ -13,7 +17,9 @@ import Tecnologia from "../components/Tecnologia";
 import Social from "../components/social";
 import Contato from "../components/Contato";
 
+
 export default function Home() {
+
   return (
     <>
       <GlobalStyle />
