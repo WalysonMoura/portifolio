@@ -1,5 +1,7 @@
 import { useState } from "react";
-import axios from "axios"
+import axios from "axios";
+
+import * as Style from "./style"
 
 export default function Contato() {
   const [nome, setNome] = useState();
@@ -9,7 +11,7 @@ export default function Contato() {
   const enviarDados = async (evento) => {
     evento.preventDefault();
 
-    await axios.post('https://formsubmit.co/ajax/walysonmoura222@gmail.com',{
+    await axios.post("https://formsubmit.co/ajax/walysonmoura222@gmail.com", {
       nome,
       email,
       message,
@@ -18,7 +20,7 @@ export default function Contato() {
 
   return (
     <>
-      <form
+      <Style.Conteiner
         action="https://formsubmit.co/walysonmoura222@gmail.com"
         method="post"
         onSubmit={enviarDados}
@@ -29,12 +31,22 @@ export default function Contato() {
           name="_subject"
           value="Pórtifolio {Walyson Moura}"
         />
-        <input type="text" name="name" onChange={e => setNome(e.target.value)}/>
-        <input type="email" name="email" onChange={e => setEmail(e.target.value)}/>
+        <input
+          type="text"
+          name="name"
+          placeholder="Digite seu Nome"
+          onChange={(e) => setNome(e.target.value)}
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Digite seu E-mail"
+          onChange={(e) => setEmail(e.target.value)}
+        />
         <textarea
           name="message"
-          onChange={e => setMessage(e.target.value)}
-          placeholder="mensagem"
+          onChange={(e) => setMessage(e.target.value)}
+          placeholder="Escreva sua mensagem"
           cols="30"
           rows="10"
         ></textarea>
@@ -48,7 +60,7 @@ export default function Contato() {
         <input type="hidden" name="_next" value="http://localhost:3000/" />
 
         <button type="submit">Enviar</button>
-      </form>
+      </Style.Conteiner>
     </>
   );
 }

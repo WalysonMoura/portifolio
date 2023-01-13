@@ -55,6 +55,10 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+input,textarea{
+	outline: none;
+	border: none;
+}
 a {
   color: inherit;
   text-decoration: none;
@@ -78,7 +82,26 @@ body {
 	background-color: ${Colors.bodyColor};
 
 	position: relative;
+
+
+	.gradient-radial{
+		width: 390px;
+    height: 390px;
+    background-color:#0088ff;
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    overflow-x: hidden;
+top: 10%;
+right: 15%;
+@media screen and (max-width: 768px){
+	top: 4%;
+right: 5rem;
+width: 290px;
+    height: 290px;
+}
 	
+	}
 }
 
 @media screen and (min-width: 968px) {

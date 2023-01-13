@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { Colors } from "../../styles/colors";
 
 export const Card = styled.section`
-  width: 20rem;
   padding: 2rem 1.5rem 1.5rem;
   display: grid;
   place-items: center;
@@ -13,9 +12,6 @@ export const Card = styled.section`
   background: rgba(255, 255, 255, 0.05);
   box-shadow: 0 -1px 12px hsla(174, 63%, 15%, 0.15);
 
-  @media (max-width: 768px) {
-    width: 23rem;    
-  }
   .texto {
     position: absolute;
     z-index: 5;
@@ -29,16 +25,23 @@ export const Card = styled.section`
     padding: 5rem 8.2rem;
     display: none;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 1rem;
 
+    h2 {
+      font-size: 1.5rem;
+      text-align: center;
+    }
+    div {
+      display: flex;
+      align-items: center;
+    }
     > svg {
       color: ${Colors.azul1};
       :hover {
         color: ${Colors.azul1};
       }
     }
-   
   }
 
   :hover {

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Colors } from "./colors";
 export const Main = styled.main`
   max-width: 1024px;
   width: 100%;
@@ -16,15 +17,46 @@ export const Main = styled.main`
 
 export const Principal = styled.section`
   width: 100%;
-  height: 90vh;
+
   display: grid;
   grid-template-columns: 1.1fr 1fr;
   align-content: center;
 
   .apresentacao {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding-top: 8rem;
+    h3 {
+      font-size: 2rem;
+    }
+    h1 {
+      font-size: 3.5rem;
+      color: ${Colors.azul1};
+    }
+    h2 {
+      margin-top: 1rem;
+      font-size: 1.5rem;
+    }
+    @media (max-width: 768px) {
+      padding-top: 8rem;
+      h3 {
+        font-size: 1.2rem;
+      }
+      h1 {
+        font-size: 2.5rem;
+        color: ${Colors.azul1};
+      }
+      h2 {
+        font-size: 1.2rem;
+      }
+    }
   }
   .imagens {
-    padding-top: 2rem;
+    margin-top: 2rem;
+    padding-top: 1rem;
+
     position: relative;
 
     div {
@@ -119,17 +151,33 @@ export const Principal = styled.section`
   }
 
   @media (max-width: 768px) {
+    height: 90vh;
     grid-template-columns: 1fr;
     row-gap: 5rem;
+    .imagens {
+    padding-top: 2rem;
+    }
   }
 `;
-export const Sobre = styled.section``;
+export const Sobre = styled.section`
+  padding-top: 10rem;
+  h2 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  
+`;
 
 export const Conhecimentos = styled.section`
   width: 100%;
 
+  h2 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
   .tecnologias {
-    padding: 0 1rem;
+    padding: 1rem;
     width: 100%;
     display: grid;
     grid-gap: 1rem;
@@ -138,15 +186,17 @@ export const Conhecimentos = styled.section`
     justify-items: center;
 
     @media (max-width: 768px) {
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
     }
   }
 `;
 export const Projetos = styled.section`
   width: 100%;
-  
+  h2 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
   .cards {
-   
     padding: 0 1rem;
     width: 100%;
     display: grid;
@@ -157,9 +207,14 @@ export const Projetos = styled.section`
 
     @media (max-width: 768px) {
       padding: 0 1rem;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
   }
 `;
 
-export const Contact = styled.section``;
+export const Contact = styled.section`
+  h2 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+`;

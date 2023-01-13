@@ -2,6 +2,7 @@ import { useEffect } from "react";
 
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 
 import formSubmit from "../services/formSubmit";
 
@@ -17,9 +18,7 @@ import Tecnologia from "../components/Tecnologia";
 import Social from "../components/social";
 import Contato from "../components/Contato";
 
-
 export default function Home() {
-
   return (
     <>
       <GlobalStyle />
@@ -28,6 +27,7 @@ export default function Home() {
         <meta name="description" content="Portifólio Walyson Moura" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <div className="gradient-radial"></div>
       <Social />
       <Style.Main>
         <Style.Principal>
@@ -135,16 +135,24 @@ export default function Home() {
           </div>
         </Style.Conhecimentos>
         <Style.Projetos>
+          <h2>Projetos</h2>
           <div className="cards">
-            <Projeto imagem="/exe.png" />
-            <Projeto imagem="/exe.png" />
-            <Projeto imagem="/exe.png" />
-            <Projeto imagem="/exe.png" />
-            <Projeto imagem="/exe.png" />
-            <Projeto imagem="/exe.png" />
+            <Projeto
+              titulo="Spider Man"
+              link=""
+              imagem="/projetos/gif-spider.gif"
+            />
+            <Projeto
+              titulo="Cozinha Prateada"
+              link=""
+              imagem="/projetos/1.png"
+            />
+            <Projeto titulo="Shoea" link="" imagem="/projetos/2.png" />
+            <Projeto titulo="Elecar" link="" imagem="/projetos/3.png" />
           </div>
         </Style.Projetos>
         <Style.Contact>
+          <h2>Contato</h2>
           <Contato />
         </Style.Contact>
       </Style.Main>
